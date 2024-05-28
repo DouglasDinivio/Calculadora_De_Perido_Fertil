@@ -56,10 +56,8 @@
     </ul>
 
     <div class="center-container">
-    
-
-
-
+        <h3>Meu nome é: {{ $usuario }}</h3>
+        <h3>Meu sexo é: {{ $sexo }}</h3>
     </div>
 
 </body>

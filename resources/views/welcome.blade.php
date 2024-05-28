@@ -27,56 +27,74 @@
         }
 
         .input-group.mb-4:hover input[type="number"].form-control {
-            border-color: rgb(205, 48, 177); 
+            border-color: rgb(205, 48, 177);
         }
 
         @media (max-width: 576px) {
             .nav-tabs {
-                padding: 10px; 
+                padding: 10px;
             }
         }
 
         .btn-red {
-            background-color:rgb(219, 121, 178);
+            background-color: rgb(219, 121, 178);
             border-color: rgb(196, 86, 150);
-            color: white; 
+            color: white;
         }
 
         .btn-red:hover {
-            border-color: rgb(205, 48, 177); 
-            border-color: rgb(205, 48, 177); 
+            border-color: rgb(205, 48, 177);
+            border-color: rgb(205, 48, 177);
+        }
+
+        .footer {
+            text-align: center;
+            justify-content: center;
         }
     </style>
 </head>
 
-<body style="background: rgb(238,174,202); background: linear-gradient(0deg, rgba(238,174,202,0.48783263305322133) 0%, rgba(148,187,233,0.4906337535014006) 100%);">
+<body
+    style="background: rgb(238,174,202); background: linear-gradient(0deg, rgba(238,174,202,0.48783263305322133) 0%, rgba(148,187,233,0.4906337535014006) 100%);">
 
     <ul class="nav nav-tabs">
-        <img src="{{ asset('images/menstrual-logo.png') }}" alt="menstrual_logo" style="width: 150px" class="mx-auto d-block">
+        <img src="{{ asset('images/menstrual-logo.png') }}" alt="menstrual_logo" style="width: 150px"
+            class="mx-auto d-block">
     </ul>
 
-    <div class="center-container">
-        <div class="center-content">
-            <div class="col-12">
-                <label for="dateInput">IUPM</label>
-            </div>
-            <div class="input-group mb-4">
-                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
+    <form method="get">
+        @csrf
 
-            <div class="col-12">
-                <label for="dateInput">DMCM</label>
-            </div>
-            <div class="input-group mb-4">
-                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
+        <div class="center-container">
+            <div class="center-content">
+                <div class="col-12">
+                    <label for="dateInput"><b>IUPM</b></label>
+                </div>
+                <div class="input-group mb-4">
+                    <input type="date" class="form-control" aria-label="Sizing example input" name="IUPM"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
 
-            <div class="input-group mb-8 mt-4">
-                <button type="button" class="btn btn-red form-control">Button</button>
+                <div class="col-12">
+                    <label for="dateInput"><b>DMCM</b></label>
+                </div>
+                <div class="input-group mb-4">
+                    <input type="number" class="form-control" aria-label="Sizing example input" name="DMCM"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group mb-8 mt-4">
+                    <button type="submit" class="btn btn-red form-control"><b>Calcular</b></button>
+                </div>
+
+                <h3></h3>
+                <label> <b>IUPM :</b> {{ $IUPM }}</label>
+                <label> <b>IUPM :</b> {{ $DMCM }}</label>
             </div>
         </div>
-    </div>
+    </form>
 
+  
 </body>
 
 </html>
