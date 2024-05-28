@@ -27,24 +27,24 @@
         }
 
         .input-group.mb-4:hover input[type="number"].form-control {
-            border-color: rgb(205, 48, 177); /* Altere a cor do contorno para rosa */
+            border-color: rgb(205, 48, 177); 
         }
 
         @media (max-width: 576px) {
             .nav-tabs {
-                padding: 10px; /* Adicione o padding desejado aqui */
+                padding: 10px; 
             }
         }
 
         .btn-red {
             background-color:rgb(219, 121, 178);
             border-color: rgb(196, 86, 150);
-            color: white; /* Cor do texto */
+            color: white; 
         }
 
         .btn-red:hover {
-            border-color: rgb(205, 48, 177); /* Altere a cor do contorno para rosa */
-            border-color: rgb(205, 48, 177); /* Altere a cor do contorno para rosa */
+            border-color: rgb(205, 48, 177); 
+            border-color: rgb(205, 48, 177); 
         }
     </style>
 </head>
@@ -59,7 +59,7 @@
     
 
 
-        
+
     </div>
 
 </body>
