@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images\menstrual-logo.png" type="menstrual-logo.png">
     <title>CPF - Calculadora de Periodo Fertil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -60,69 +61,67 @@
     style="background: rgb(238,174,202); background: linear-gradient(180deg, rgba(238,174,202,0.48783263305322133) 100%, rgba(148,187,233,0.4906337535014006) 0%); height:100vh;">
 
     <ul class="nav nav-tabs mt-4">
-        
+
         <img src="{{ asset('images\menstrual-logo.png') }}" alt="menstrual_logo" style="width: 150px"
             class="mx-auto d-block">
     </ul>
     <br>
 
-    <form method="get">
+    <form action="{{ url('/result') }}" method="GET">
         @csrf
 
-        <div class="center-container">
+        <div class="center-container" style=" color: #A32CC4;">
             <div class="center-content">
                 <div class="col-12">
                     <label for="dateInput"><b>Inicio da última menstruação:</b></label>
                 </div>
                 <div class="input-group mb-4">
-                    <input type="date" class="form-control" aria-label="Sizing example input" name="IUPM"
-                        aria-describedby="inputGroup-sizing-default">
+                    <input style=" color: #A32CC4;" type="date" class="form-control"
+                        aria-label="Sizing example input" name="IUPM" aria-describedby="inputGroup-sizing-default" required>
                 </div>
 
                 <div class="col-12">
                     <label for="dateInput"><b>Duração do ciclo menstrual em dias:</b></label>
                 </div>
                 <div class="input-group mb-4">
-                    <input type="#" class="form-control" aria-label="Sizing example input" name="DMCM"
-                        aria-describedby="inputGroup-sizing-default">
+                    <input style=" color: #A32CC4;" type="#" class="form-control"
+                        aria-label="Sizing example input" name="DMCM" aria-describedby="inputGroup-sizing-default" required>
                 </div>
 
                 <div class="input-group mb-8 mt-4">
                     <button type="submit" class="btn btn-red form-control"><b>Calcular</b></button>
                 </div>
 
-<br>
-                <label><b>Resultado:</b></label>
+                <br>
+                <small style="text-align: center">
+                    <label><b style="font-weight: 600">Benefícios da Calculadora de Período Fértil:</b></label><br>
+                    <li><b>Precisão:</b> Algoritmos sofisticados garantem resultados precisos sobre seu período fértil.
+                    </li>
+                    <li><b>Facilidade de Uso:</b> Interface intuitiva permite inserir dados e obter resultados
+                        rapidamente.
+                    </li>
+                    <li><b>Planejamento Familiar:</b> Aumenta as chances de concepção ao identificar os dias mais
+                        férteis.</li>
+                    <li><b>Empoderamento:</b> Dá controle e conhecimento sobre seu ciclo menstrual.</li>
+                </small>
+                <br>
 
                 <small style="text-align: center">
-                    <label><b style="font-weight: 600">Dia da Ovulação : </b> {{ $CálculoDiaOvulação }}</label><br>
-                    O seu dia de ovulação é o dia {{ $CálculoDiaOvulação }}, neste dia que durante o ciclo
-                    menstrual da mulher o ovário
-                    libera um óvulo. Este é o momento em que a
-                    mulher é mais fértil e tem a maior
-                    probabilidade de engravidar se houver
-                    relação sexual desprotegida.
+                    <label><b style="font-weight: 600">Por que Usar?</b></label><br>
+                    Se você quer tomar decisões informadas sobre sua saúde reprodutiva, a Calculadora de Período Fértil
+                    desenvolvida por Douglas Dinivio
+                    é a solução ideal. Experimente agora e veja como essa tecnologia pode transformar sua vida. Acesse,
+                    insira seus dados e descubra seus dias mais férteis com precisão e facilidade. Faça escolhas
+                    informadas para seu futuro hoje mesmo!
                 </small>
-<br>
-
-
-                <small style="text-align: center">
-                    <label><b style="font-weight: 600">Período Fértil </b></label> <br>
-                    <label><b>Primeiro dia do período fértil :</b> {{ $PrimeiroDiaPeriodoFertil }}</label>
-                    <label><b>Último dia do período fértil :</b>{{ $ÚltimoDiaPeriodoFertil }}</label> <br>    
-                    O Período Fértil é a janela de tempo no ciclo menstrual em que a mulher tem a maior chance de
-                    engravidar. Ele geralmente inclui o dia da ovulação e os cinco dias anteriores, totalizando cerca de
-                    seis dias. Durante esse período, os espermatozoides podem sobreviver no corpo da mulher por até
-                    cinco dias, e o óvulo permanece viável por cerca de 24 horas após a ovulação
-                </small>
-                <label> </label>
-                <label> </label>
+                <br>
             </div>
         </div>
     </form>
+
     <div class="center-container">
-        <div class="center-content">
-        <footer><small>@2024</small></footer>
+        <div class="center-content" style=" color: #A32CC4;">
+            <footer><small>@2024</small></footer>
         </div>
     </div>
 

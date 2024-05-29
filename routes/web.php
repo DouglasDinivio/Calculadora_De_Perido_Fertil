@@ -6,6 +6,6 @@ use App\Http\Controllers\resultController;
 
 
 
-Route::get('/', [welcomeController::class, 'formulario']);
+Route::post('/', [welcomeController::class, 'formulario']);
 
-Route::get('/result', [resultController::class, 'resultado']);
+Route::post('/result', [resultController::class, 'resultado']);
